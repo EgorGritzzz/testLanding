@@ -1,0 +1,1414 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Верстка шапки*/
+
+.header {
+    background: url(images/background.png);
+    color: white;
+}
+
+.header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 10px;
+}
+
+.header__menu .navlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.navlist p {
+    margin-left: 15px;
+}
+
+.navlist p:hover {
+    -webkit-text-decoration: underline grey 3px;
+    text-decoration: underline grey 3px;
+cursor: pointer;
+}
+
+.header__burger-btn {
+    display: none;
+}
+
+.header__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 30px;
+   max-height: 1200px
+}
+
+.header__info--text {
+    padding-top:150px;
+    text-align: center;
+}
+
+.header__info--text .header__info--main-text {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 35px;
+}
+
+.header__info--text .header__info--main-text span {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px;
+}
+
+.header__info--description {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+    padding-top:20px;
+}
+
+#header__info--download_btn  {
+    text-align: center;
+    padding: 10px 40px 10px 40px;
+    color: white;
+    border: 1px solid white;
+    background: 0;
+    margin-top: 50px;
+}
+
+#header__info--download_btn:hover {
+    background: white;
+    color: black;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.header__info--images {
+    position: relative;
+    max-width: 600px;
+}
+
+.header__info--images__green__phone {
+    position: absolute;
+    left: -90px;
+    bottom: -10px;
+}
+
+
+/*Адаптив шапки*/
+
+@media (max-width: 1000px) {
+    .header__burger-btn {
+        font-size: 20px;
+        padding-inline: 15px;
+        padding-bottom: 3px;
+        border: none;
+        color: black;
+        font-weight: bold;
+        display: block;
+        background-color: grey;
+    }
+
+    
+    .header__menu--dropdown .navlist {
+        display: none;
+    }
+
+    .header__menu--dropdown:hover .navlist {
+        display: block;
+        position: absolute;
+        background: black;
+        z-index:1;
+        top: 40px;
+    }
+
+    .header__menu--dropdown:hover .navlist p {
+        padding: 10px;
+        margin: 10px;
+    }
+    
+
+    .header__info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-top: 30px;
+        max-height: 1200px;
+    }
+
+    .header__info--images {
+        position: relative;
+        max-width: 1000px;
+        text-align: center;
+        padding: 10% 10% 3% 50%;
+    }
+
+    .header__info--images__green__phone {
+        position: absolute;
+        left: 40%;
+        bottom: -10px;
+    }
+           
+}
+
+@media (max-width: 600px) {
+    .header__info {
+        margin-top: -10px;
+        }
+        
+        .header__info--text .header__info--main-text {
+           font-size: 24px;
+        }
+        
+        .header__info--text .header__info--main-text span {
+            font-size:24px;
+            font-style: normal;
+        }
+        
+        .header__info--description {
+            font-size: 15px;
+        }
+        
+        .header__info img {
+            height: 520px;
+        }
+        
+        .header__info--images {
+            position: relative;
+            max-width: 600px;
+            text-align: center;
+            padding: 10% 10% 1% 40%;
+        }
+        
+        .header__info--images__green__phone {
+            position: absolute;
+            left: 30%;
+            bottom: 15px;
+        }
+        
+        .header__menu--dropdown:hover .navlist {
+            display: block;
+            position: absolute;
+            background: black;
+            z-index:1;
+            font-size: 10px;
+            top: 40px;
+            right: 10%;
+        }
+}
+
+@media (max-width: 400px) {
+    .header__info--images {
+        position: relative;
+        max-width: 400px;
+        text-align: center;
+        padding: 15% 10% 3% 30%;
+    }
+    
+    .header__info--images__green__phone {
+        position: absolute;
+        left: 20%;
+        bottom: -5px;
+    }
+
+    .header__info img {
+        height: 420px;
+    }
+
+    .header__info {
+        margin-top: -20px;
+        }
+        
+        .header_info--text .header__info--main-text {
+           font-size: 18px;
+        }
+        
+        .header__info--text .header__info--main-text span {
+            font-size:20px;
+            font-style: normal;
+            font-weight: bold;
+        }
+        
+        .header__info--description {
+            font-size: 13px;
+        }
+}
+
+/*Верстка секции доступности приложения на маркете*/
+
+.main {
+    background: url(images/bluebackground.png) no-repeat;
+    background-size: cover;
+    color: white;
+    height: 400px;
+    width:100%;
+    position: absolute;
+    top: 60%;
+    
+}
+
+.marketplace {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.marketplace__title  p{
+    font-size: 30px;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+.marketplace__title  h2{
+    font-size: 30px;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+.marketplace__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+     -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+     align-items: center;
+     padding-top: 20px;
+     gap: 30px;
+}
+
+
+
+.marketplace__card--ios {
+    border: 1px solid white;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
+    
+}
+
+.marketplace__card--ios:hover {
+  background-color:black;
+  cursor: pointer;
+}
+
+.marketplace__card--android:hover {
+    background-color:black;
+    cursor: pointer;
+  }
+
+
+.marketplace__card--android {
+    border: 1px solid white;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
+}
+
+.marketplace__card--ios p {
+    font-style: italic;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.marketplace__card--android p {
+    font-style: italic;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* Адаптив секции доступа на маркетплейсе*/
+
+@media (max-width: 1000px) {
+    .main {
+        background: url(images/bluebackground.png) no-repeat;
+        background-size: cover;
+        color: white;
+        height: 400px;
+        width:100%;
+        position: absolute;
+        top: 120%;
+        
+    }
+
+    .marketplace__title  p{
+        font-size: 22px;
+        font-weight: 300;
+        font-style: italic;
+        padding-top: 20px;
+    }
+    
+    .marketplace__title  h2{
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        background: url(images/bluebackground.png) no-repeat;
+        background-size: cover;
+        color: white;
+        height: 400px;
+        width:100%;
+        position: absolute;
+        top: 100%;
+        
+    }
+
+    .marketplace__title  p{
+        font-size: 15px;
+        font-weight: 300;
+        font-style: italic;
+        padding-top: 20px;
+    }
+    
+    .marketplace__title  h2{
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        padding-top: 20px;
+    }
+
+    .marketplace__card--ios {
+        border: 1px solid white;
+        width: 30%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 15px;
+        
+    }
+    
+    .marketplace__card--android {
+        border: 1px solid white;
+        width: 30%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 15px;
+    }
+
+    .marketplace__card--ios p {
+        font-style: italic;
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    
+    .marketplace__card--android p {
+        font-style: italic;
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .marketplace__card--ios img {
+        width: 15px;
+        height: 20px;
+        padding-top: 10px;
+    }
+
+    .marketplace__card--android img {
+        width: 15px;
+        height:20px;
+        padding-top: 10px;
+    }
+
+    .marketplace__card--ios {
+        border: 1px solid white;
+        width: 30%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 10px;
+        
+    }
+
+    .marketplace__card--android {
+        border: 1px solid white;
+        width: 30%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 10px;
+    }
+}
+
+/* Верстка секции с фичами приложения */
+
+.features {
+    color: black;
+    margin-top: 100px;
+}
+
+.feature__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+.main__features {
+    padding-top: 20px;
+    font-style: italic;
+}
+
+.main__features--list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 40px 1fr;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.main__features--list div {
+    padding-top: 10px;
+}
+
+.main__features--list p {
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.image__circle {
+    border: 2px solid blue;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.image__circle img {
+     width: 35px;
+     padding: 10px;
+}
+
+.feature__images {
+    position: relative;
+}
+
+.feature__image--2 {
+    position: absolute;
+    left: 30%;
+}
+
+@media (max-width: 1000px) {
+    .features {
+        color: black;
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 800px) {
+    .feature__images img {
+        height: 300px;
+    }
+    
+    .main__features h2{
+        font-size: 16px;
+    }
+    
+    .main__features--list p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .feature__description {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .main__features--list {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 20px 1fr;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    .image__circle {
+        margin-left: 30%;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .image__circle img {
+        width: 30px;
+    }
+}
+
+@media (max-width:400px) {
+    .feature__images img {
+        height: 250px;
+    }
+}
+
+
+/* Верстка секции 'почему надо выбрать это приложение' */
+
+.abilities {
+    background: url(images/sectionwhyus.png) no-repeat;
+    width: 100%;
+    background-size: cover;
+    font-style: italic;
+    text-align: center;
+    padding-top: 100px;
+    height: 800px;
+}
+
+.ability__title h2 {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.ability__title p {
+    padding-top: 15px;
+}
+
+.ability__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
+    padding-top: 60px;
+    
+}
+
+.ability__list p {
+  padding-top: 12px;
+}
+
+.ability__list--firstsection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+}
+
+.ability__list--secondsection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+}
+
+/*Адаптив секции 'почему нужно выбрать это приложение' */
+
+@media (max-width: 1000px) {
+    .ability__title h2 {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .ability__list--firstsection .ability__argument--column1 h3 {
+        font-size: 15px;
+    }
+
+    .ability__list--firstsection .ability__argument--column1 p {
+        font-size: 12px;
+    }
+
+    .ability__image img {
+        width: 200px;
+    }
+
+    .ability__list--secondsection .ability__argument--column2 h3 {
+        font-size: 15px;
+    }
+
+    .ability__list--secondsection .ability__argument--column2 p {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .ability__image img {
+        width: 170px;
+    }
+
+    .ability__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 40px;
+        padding-top: 60px;
+        
+    }
+
+    .ability__list--firstsection {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        gap: 20px;
+    }
+
+    .ability__list--secondsection {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        gap: 20px;
+    }
+
+    .abilities {
+        background: url(images/sectionwhyus.png) no-repeat;
+        width: 100%;
+        background-size: cover;
+        font-style: italic;
+        text-align: center;
+        padding-top: 100px;
+        height: 1100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .ability__title h2 {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .ability__title p {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .ability__list--firstsection .ability__argument--column1 h3 {
+        font-size: 10px;
+    }
+
+    .ability__list--firstsection .ability__argument--column1 p {
+        font-size: 10px;
+    }
+
+    .ability__image img {
+        width: 150px;
+    }
+
+    .ability__list--secondsection .ability__argument--column2 h3 {
+        font-size: 10px;
+    }
+
+    .ability__list--secondsection .ability__argument--column2 p {
+        font-size: 10px;
+    }
+}
+
+/* Верстка слайдера */
+
+.slider {
+    color: black;
+    text-align: center;
+}
+
+.slider__title h2 {
+    font-size: 35px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    width: 400px;
+    height: 700px;
+    padding-bottom: 30px;
+    background-color: white;
+    border: 6px solid grey;
+}
+  
+.slide_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide_img img {
+    width: 100%;
+    height: 100%;
+}
+
+#i1, #i2, #i3 {
+    display: none;
+}
+
+.pre, .nxt {
+    width: 12%;
+    height: 5%;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    z-index: 99;
+    background: rgba(88,88,88,0.4);
+    display: inline-block;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.pre {
+    left: 0;
+}
+
+
+
+.nxt {
+    right: 0;
+}
+
+.nav {
+    width: 100%;
+    height: 11px;
+    position: absolute;
+    z-index: 99;
+    bottom: 12%;
+    text-align: center;
+}
+
+.dots {
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin: 0 5px;
+    position: reltive;
+    display: inline-block;
+    background: white;
+}
+
+.slide_img {
+    z-index: -1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three {
+    z-index: 9;
+}
+
+#i1:checked ~.nav #dot1,
+#i2:checked ~.nav #dot2,
+#i3:checked ~.nav #dot3 {
+    background: blue;
+}
+
+/* Адаптив слайдера */
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+        width: 300px;
+        height: 600px;
+        padding-bottom: 30px;
+        background-color: white;
+        border: 6px solid grey;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+        width: 250px;
+        height: 500px;
+        padding-bottom: 30px;
+        background-color: white;
+        border: 6px solid grey;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+        width: 200px;
+        height: 400px;
+        padding-bottom: 30px;
+        background-color: white;
+        border: 6px solid grey;
+    }
+}
+
+/*Верстка секции с видеоскрином*/
+
+.video__screen {
+    background: url(images/videoscreenbg.png) no-repeat;
+    background-size: cover;
+    font-style: italic;
+    text-align: center;
+    padding-top: 100px;
+    height: 700px;
+}
+
+.video__screen--title {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.video__screen--screen {
+    padding-top: 20px;
+    position: relative;
+}
+
+.video__screen--screen .video__screen--button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/*Адаптив секции с видеоскрином*/
+
+@media (max-width: 1000px) {
+
+    .video__screen--title {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .video__screen--display {
+        width: 80%
+    }
+
+    .video__screen--button {
+        width: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .video__screen--title {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .video__screen {
+        background: url(images/videoscreenbg.png) no-repeat;
+        background-size: cover;
+        font-style: italic;
+        text-align: center;
+        padding-top: 100px;
+        height: 500px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .video__screen--title {
+        font-size: 14px;
+        font-weight: 300;
+    } 
+
+    .video__screen {
+        background: url(images/videoscreenbg.png) no-repeat;
+        background-size: cover;
+        font-style: italic;
+        text-align: center;
+        padding-top: 100px;
+        height: 350px;
+    }
+}
+
+/* Верстка секции 'Загрузки и обновления'*/
+
+.downloads {
+    color: black;
+    font-style: italic;
+    padding-top: 100px;
+}
+
+.downloads__title h2 {
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.downloads__platforms {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.downloads__platforms div {
+    color: white;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 5px;
+}
+
+.download__platform--android {
+    background-color: green;
+}
+
+.download__platform--android p {
+ padding-top: 3px;
+}
+
+.download__platform--ios {
+    background-color: blue;
+}
+
+.download__platform--ios p {
+    padding-top: 3px;
+}
+
+.download__platform--windows {
+    background-color: red;
+}
+
+.download__platform--windows p {
+    padding-top: 3px;
+}
+
+.downloads__platforms img {
+    width: 30px;
+}
+
+.downloads__info {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+}
+
+.downloads__form p {
+    font-weight: 600;
+}
+
+.downloads__form form button {
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid grey;
+    font-weight: 300;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.downloads__form form button:hover {
+    background-color: black;
+    color: white;
+}
+
+input[type="text"] {
+    padding: 7px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.downloads__image {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/*Адаптив секции 'Загрузки и обновления'*/
+
+@media (max-width: 1000px) {
+   .downloads__title h2 {
+        font-size: 25px;
+    }
+
+   .downloads__platforms div {
+        width: 70px;
+        height: 70px;
+        font-size: 10px;
+    }
+
+   .downloads__platforms img {
+        width: 20px;
+    }
+
+   .downloads__info {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .downloads__form {
+        margin-left: 20px;
+    }
+
+    .downloads__form p {
+        font-size: 12px;
+    }
+
+   .downloads__form form button {
+        width: 50px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    input[type="text"] {
+        padding: 7px;
+        margin-top: 10px;
+        border-bottom: 1px solid #ccc;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 12px;
+    }
+
+    .downloads__image img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .downloads__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .downloads__form {
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+     .downloads__title h2 {
+        font-size: 20px;
+     }
+
+    .downloads__platforms div {
+        width: 60px;
+        height: 60px;
+        font-size: 8px;
+    }
+
+   .downloads__platforms img {
+        width: 15px;
+    }
+}
+
+/* Верстка секции 'support'*/
+
+.support {
+    background: url(images/supportbg.png);
+    background-size: cover;
+    font-style: italic;
+    text-align: center;
+    padding-top: 100px;
+    height: 500px;
+}
+
+.support__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 30px;
+    padding-top: 60px;
+}
+
+.support__container--form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+}
+
+
+
+ input[type="button"] {
+    padding: 10px;
+    background: 0;
+    color: white;
+    border: 2px solid white;
+ }
+
+ input[type="button"]:hover {
+    background: black;
+    cursor: pointer;
+}
+
+.support__container--contacts  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+}
+
+.support__container--chat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+}
+
+.support__container--chat button {
+    padding: 10px;
+    background: 0;
+    color: white;
+    border: 2px solid white;
+}
+
+.support__container--chat button:hover {
+    background: black;
+    cursor: pointer;
+}
+
+.online__status {
+    background-color: #1be32f;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.online__status p {
+    padding-top: 5px;
+}
+
+/*Адаптив секции 'support'*/
+
+@media (max-width: 800px) {
+    .support__container p {
+        font-size: 12px;
+    }
+    .support__container--chat {
+        width: 20%;
+    }
+
+    .support__container--contacts {
+        width: 20%;
+    }
+
+    .support__container--form {
+        width: 20%;
+    }
+}
+
+@media (max-width: 600px) {
+     .support {
+        height: 1200px;
+     }
+
+    .support__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding-top: 60px;
+        padding-left: 35%;
+    }
+
+    .support__container--chat {
+        width: 70%;
+    }
+
+    .support__container--chat img {
+        width: 70%;
+        padding-left: 13%;
+    }
+
+    .support__container--contacts {
+        width: 70%;
+    }
+
+    .support__container--form {
+        width: 70%;
+    }
+}
+
+/*Верстка подвала*/
+
+footer {
+    background: url(images/footerbg.png);
+    background-size: cover;
+    padding-top: 70px;
+    color: black;
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.footer__logo img {
+    width: 150px;
+}
+
+.footer__media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Адаптив подвала*/
+
+@media(max-width: 600px) {
+    footer {
+        background: url(images/footerbg.png);
+        background-size: cover;
+        padding-top: 50px;
+        color: black;
+        text-align: center;
+    }
+
+    .footer__logo img {
+        width: 100px;
+    }
+
+    .footer__media img {
+        width: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer__media img {
+        width: 15px;
+    }
+
+    .footer__media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .footer__container p {
+        font-size: 12px;
+        font-style: italic;
+    }
+}
